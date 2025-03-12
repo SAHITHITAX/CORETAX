@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: url('https://i.imgur.com/MPtNCR3.jpg') no-repeat center center fixed;
+  background-size: cover; /* Prevents zooming */
+  color: white; /* Makes all text white */
+}
+  p {
+    color: black; /* Makes the paragraph text black */
+    margin-bottom: 15px; /* Adds space below the paragraph */
+  }
+  
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00FF0080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+  padding: 20px;
+  background: white; /* Solid white background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+  color: black; /* Black text inside the form */
+}
+
+label {
+  color: black; /* Black text for labels */
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px -5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: white;
+  color: black;
+}
+  button {
+    margin: 10px 0; /* Adds space above and below the button */
+  }
+
+input::placeholder {
+  color: #555; /* Darker gray for better contrast */
+}
+
+input[type="file"] {
+  color: black;
+  border: none;
+}
+  .container {
+    display: flex;
+    justify-content: space-between; /* Optional: Adds space between the buttons */
+  }
+
+  .button {
+    width: 250px; /* Same width for all buttons */
+    height: 50px; /* Same height for all buttons */
+    background-color: #e8f5e9; /* Greenish transparent color */
+    color: black; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    font-size: 16px; /* Optional: Font size */
+    cursor: pointer; /* Makes the button look clickable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .button:hover {
+    background-color: white; /* Darker color on hover */
+  }
+
+  .box {
+    width: 250px; /* Adjust the width as needed */
+    height: 2000px; /* Optional: You can set a height for better visibility */
+  
+  
+ 
+  }
+
+     /* Top Bar Styles */
+        .top-bar {
+            background-color: #e8f5e9; /* Greenish transparent background */
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Keeps it on top of other content */
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+   
+   
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+span {
+    display: block; /* or inline-block */
+    text-align: left;
+}
+    a {
+    display: block; /* or inline-block */
+    text-align: right;
+   
+}  
+  h1 {
+    font-size: 56px; /* Adjust the size as needed */
+} 
+  </style>
+</head>
+<body>
+ <!-- Top Bar with Information -->
+    <div class="top-bar">
+        <span>SAHITHI TAX CONSULTANCY | #8499994485</span>
+
+    
+    </div>
+  <!-- Welcome Section -->
+  <div id="welcomeSection">
+    <h1>Welcome to Sahithi Tax Consultancy</h1>
+    <p>We provide expert tax consultation services.</p>
+  </div>
+  
+<div class="container">
+ 
+    <div   class="box"> <h2>Direct Tax</h2>
+      <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
+      Apply for New PAN
+      </button>
+      <button  class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxVztiPl7npPEWUH3oF8_uAEDjECTrrL1ahfX5du4Jl4TpIZvE9WgD0kXe7vBqhoba2kg/exec';">
+      Apply for  PAN Correction
+      </button>
+      <button class="button" onclick="window.location.href='';">
+      Apply for  TAN
+      </button>
+      <button class="button" onclick="window.location.href='';">
+      ITR FILING (3 Years)
+      </button>
+      <button class="button" onclick="window.location.href='';">
+      Form 26AS
+      </button> 
+      <button class="button" onclick="window.location.href='';">
+      Income tax Notice
+      </button> 
+      <button class="button" onclick="window.location.href='';">
+      TDS Filing
+      </button> 
+      <button class="button" onclick="window.location.href='';">
+      Tax Planning
+      </button>
+      <button class="button" onclick="window.location.href='';">
+      Turnover Certificate
+      </button>
+      <button class="button" onclick="window.location.href='';">
+      Networth Certificate
+      </button>
+      <button class="button" onclick="window.location.href='';">
+      Tax Audit
+      </button>
+   </div>
+
+
+  <div  class="box"> <h2>Indirect Tax</h2>
+      <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
+  Apply for New GST
+</button>
+  <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxVztiPl7npPEWUH3oF8_uAEDjECTrrL1ahfX5du4Jl4TpIZvE9WgD0kXe7vBqhoba2kg/exec';">
+ GST Return Filing
+</button>
+  <button class="button" onclick="window.location.href='';">
+Cancellation of GST
+</button>
+  <button class="button" onclick="window.location.href='';">
+GST Notice
+</button>
+    <button class="button" onclick="window.location.href='';">
+Composition scheme
+</button>  
+    </div>
+ <div  class="box"> <h2>MCA Services</h2>
+      <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
+ New Company Registration
+</button>
+  <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxVztiPl7npPEWUH3oF8_uAEDjECTrrL1ahfX5du4Jl4TpIZvE9WgD0kXe7vBqhoba2kg/exec';">
+MCA filings
+</button>
+  <button class="button" onclick="window.location.href='';">
+  LLP Registration
+</button>
+  <button class="button" onclick="window.location.href='';">
+ ITR FILING
+</button>
+</div>
+ <div  class="box"> <h2>Other Services</h2>
+      <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxtiyDxp4Rxpq-E97FyCqtjI-O5QYwq6D_gxh1h_4pPN9-PddfVMFzDM8nV28enYJ3I5A/exec';">
+  EPF | ESI Registration
+</button>
+  <button class="button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbxVztiPl7npPEWUH3oF8_uAEDjECTrrL1ahfX5du4Jl4TpIZvE9WgD0kXe7vBqhoba2kg/exec';">
+  Labour Licence
+</button>
+  <button class="button" onclick="window.location.href='';">
+  MSME
+</button>
+  <button class="button" onclick="window.location.href='';">
+ EPF Withdrawal
+</button>
+   <button class="button" onclick="window.location.href='';">
+ Digital Signature
+</button>
+<button class="button" onclick="window.location.href='';">
+Professional Tax
+</button>
+<button class="button" onclick="window.location.href='';">
+ Trade Licence
+</button>
+   
+</div>
+    </div>
+  <script>
+
+  </script>
+
+</body>
+</html>
