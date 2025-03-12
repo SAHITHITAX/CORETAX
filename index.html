@@ -144,22 +144,60 @@ color: white;
       h2 {
     background:#e9c261;
      color: black;
-
+ .info-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      gap: 20px; /* Adjust spacing */
+      padding: 20px;
+    }
       } 
+.coretax-container {
+            text-align: center;
+            font-size: 72px;
+            color: #e9c261;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hover-info {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s;
+        }
+
+        .coretax-container:hover .hover-info {
+            visibility: visible;
+            opacity: 1;
+        }
   </style>
 </head>
 <body>
- <!-- Top Bar with Information -->
 
-</br>
-  </br>
- 
   <!-- Welcome Section -->
-  
-<p style="font-size: 72px; text-align: center;color: #e9c261;" >
- CoreTax
-</p>
+  </br>
+<div class="coretax-container">
+        CoreTax
+        <div class="hover-info">sahithitaxconsultancy@gmail.com | 8499994485</div>
+    </div>
+
+
+
     <p>We provide expert tax consultation services.</p>
+
   
 <div class="container">
  
@@ -215,19 +253,13 @@ color: white;
         <a href="#">Digital Signature</a>
         <a href="#">Professional Tax</a>
         <a href="#">Trade Licence</a>
-   
-</div>
+	</div>
+
     </div>
-  <footer>
-    <h3>Government Tax Resources</h3>
-    <ul>
-        <li><a href="https://www.irs.gov/" target="_blank">IRS (USA)</a></li>
-        <li><a href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank">HMRC (UK)</a></li>
-        <li><a href="https://www.canada.ca/en/revenue-agency.html" target="_blank">CRA (Canada)</a></li>
-        <li><a href="https://www.ato.gov.au/" target="_blank">ATO (Australia)</a></li>
-        <li><a href="https://www.incometaxindia.gov.in/" target="_blank">Income Tax India</a></li>
-    </ul>
-</footer>
+ <footer>
+  
+    <p>Core Tax Consulting | sahithitaxconsultancy@gmail.com | 8499994485</p>
+  </footer>
   <script>
 
   </script>
