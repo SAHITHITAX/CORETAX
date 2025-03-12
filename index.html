@@ -117,9 +117,24 @@ span {
     display: block; /* or inline-block */
     text-align: left;
 }
-    a {
+   a {
     color: white;
     text-align: left;
+    display: block; /* Makes sure the link takes full width */
+    padding: 12px; /* Adds padding for better spacing */
+    width: 250px; /* Adjusts width for uniform buttons */
+    background-color: #007bff; /* Blue background */
+    text-decoration: none; /* Removes underline */
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    border-radius: 5px; /* Rounded corners */
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
    
 }  
   h1 {
