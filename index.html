@@ -2,313 +2,470 @@
 <html>
 <head>
   <base target="_top">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <style>
-  body {
-	
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 20px;
-   background: url('https://imgur.com/uL5Z20Z.jpg') no-repeat center center fixed;
-  background-size: cover; /* Prevents zooming */
-  color: white; /* Makes all text white */
- font-family: 'Lora', serif;
-  }
-  p {
-    color: white; /* Makes the paragraph text black */
-    margin-bottom: 15px; /* Adds space below the paragraph */
-  }
-  
-.hidden {
-  display: none;
-}
-html, body {
- margin: 0;
-            padding: 0;
-            height: 100%;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-}
-
-
-form {
-  max-width: 400px;
-  margin: auto;
-  text-align: left;
-  padding: 20px;
-  background: white; /* Solid white background */
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
-  color: black; /* Black text inside the form */
-}
-
-label {
-  color: black; /* Black text for labels */
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin: 5px -5px;
-  border: 1px #ccc;
-  border-radius: 5px;
-  background: white;
-  color: black;
-}
-  button {
-    margin: 10px 0; /* Adds space above and below the button */
-  }
-
-input::placeholder {
-  color: #555; /* Darker gray for better contrast */
-}
-
-input[type="file"] {
-  color: black;
-  border: none;
-}
-  .container {
-background: Black;
-    display: flex;
-    justify-content: space-between; /* Optional: Adds space between the buttons */
-  }
-
-  .button {
+    /* Login Page Styles */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://imgur.com/uL5Z20Z.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
     
-    text-align: left;
-    color: white; /* Button text color */
-   
-    font-size: 16px; /* Optional: Font size */
-    cursor: pointer; /* Makes the button look clickable */
-
-   font-family: 'Lora', serif;
-  }
-
-  .button:hover {
-    background-color: white; /* Darker color on hover */
-  }
-
-.box {
-    width: 250px; /* Adjust the width as needed */
-    height: 700px; /* Optional: You can set a height for better visibility */
-    text-align: left;
-    padding: 10px; /* Adds space inside the box around the text */
-}
+    .login-form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      text-align: center;
+    }
+    
+    .login-form h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .login-form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .login-form button {
+      background-color: #e9c261;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    
+    .login-form button:hover {
+      background-color: #d8b24d;
+    }
+    
+    .error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+    
+    /* Main Website Styles (hidden initially) */
+    .website-content {
+      display: none;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background: url('https://imgur.com/uL5Z20Z.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Lora', serif;
+    }
+    
+    p {
+      color: white;
+      margin-bottom: 15px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+    
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      color: black;
+    }
+    
+    label {
+      color: black;
+      font-weight: bold;
+    }
+    
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 5px -5px;
+      border: 1px #ccc;
+      border-radius: 5px;
+      background: white;
+      color: black;
+    }
+    
+    button {
+      margin: 10px 0;
+    }
+    
+    input::placeholder {
+      color: #555;
+    }
+    
+    input[type="file"] {
+      color: black;
+      border: none;
+    }
+    
+    .container {
+      background: Black;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .button {
+      text-align: left;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: 'Lora', serif;
+    }
+    
+    .button:hover {
+      background-color: white;
+    }
+    
+    .box {
+      width: 250px;
+      height: 700px;
+      text-align: left;
+      padding: 10px;
+    }
+    
     .box p {
-    margin: 5px;
+      margin: 5px;
+    }
+    
+    /* Fixed Top Bar Styles */
+.top-bar {
+  background-color: #e9c261;
+  color: black;
+  padding: 5px 20px; /* Reduced padding to help achieve 25px height */
+  text-align: center;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 96.35	%;
+  height: 25px; /* Corrected property name and value */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center; /* Added center alignment */
+  align-items: center;
 }
-
-     /* Top Bar Styles */
-        .top-bar {
-            background-color: #e9c261; /* Greenish transparent background */
-            color: black;
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 16px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Keeps it on top of other content */
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-   
-   
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-        .top-bar a:hover {
-            text-decoration: underline;
-        }
-span {
-    display: block; /* or inline-block */
-    text-align: left;
-}
- a {
-    color: white;
-    text-align: left;
-    display: block; /* Places links one below the other */
-    text-decoration: none; /* Removes underline */
-    font-size: 16px;
-    font-family: 'Lora', serif;
-    margin: 5px 0; /* Adds space between links */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover for clarity */
-}
-   
-}  
-h1 {
-    font-size: 72px; /* Adjust size as needed */
-color: white;
-}
-      h2 {
-    background:#e9c261;
-     color: black;
- .info-container {
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+    
+    span {
+      display: block;
+      text-align: left;
+    }
+    
+    a {
+      color: white;
+      text-align: left;
+      display: block;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: 'Lora', serif;
+      margin: 5px 0;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    h1 {
+      font-size: 72px;
+      color: white;
+    }
+    
+    h2 {
+      background:#e9c261;
+      color: black;
+    }
+    
+    .info-container {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       font-size: 24px;
       font-weight: bold;
-      gap: 20px; /* Adjust spacing */
+      gap: 20px;
       padding: 20px;
     }
-      } 
-.coretax-container {
-            text-align: center;
-            font-size: 72px;
-            color: #e9c261;
-            position: relative;
-            display: inline-block;
-	  background: ;
-        }
-
-        .hover-info {
-            visibility: hidden;
-            opacity: 0;
-            position: absolute;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 20px;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s;
-        }
-
-        .coretax-container:hover .hover-info {
-            visibility: visible;
-            opacity: 1;
-        }
-	  .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Optional: Adds a dark background */
-  color: white; /* Text color */
-  text-align: center;
-  padding: 10px;
-  font-size: 16px;
-}
-
+    
+    .coretax-container {
+      text-align: center;
+      font-size: 72px;
+      color: #e9c261;
+      position: relative;
+      display: inline-block;
+      background: ;
+    }
+    
+    .hover-info {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    }
+    
+    .coretax-container:hover .hover-info {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      
+      .coretax-container {
+        font-size: 48px;
+      }
+    }
   </style>
 </head>
 <body>
 
-
-</br></br></br></br></br>
-<div class="coretax-container">
-        CoreTax
-        <div class="hover-info">sahithitaxconsultancy@gmail.com | 8499994485</div>
-	    <p style="font-size: 14px;">We provide expert tax consultation services.</p>
-	<p style="font-size: 12px;">A Division of Sahithi Tax Consultancy</p>
-    </div>
-
-
-
-
-
-  
-<div class="container">
- 
-    <div   class="box">
-<h2>PAN/TAN Services </h2>
-       <a class="link-button" href="https://script.google.com/macros/s/AKfycbwRMN2ZYVaM42IY0XgAa5-6RzUQr797NmPENpLniJRyAwHmkTCFLQx0LNKX_5iWCrTu/exec" target="_blank">
-            Apply for New PAN (Individual, Firm, Company etc,)
-        </a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbyMYkXl99VIIRYKcvW85_joVkFtxV7Eql796Okm4drkRlR_COa4V0KWCZa4wWspW6QcEA/exec" target="_blank">
-            Apply for PAN Correction (Individual, Firm, Company etc,)
-        </a>
-	<a class="link-button" href="https://script.google.com/macros/s/AKfycbw2sye9oMYwLfbl6B7mYy7dllgmge345cAmLALrgfF27Uxlg38qBrSIUVVyAPDPMWXQ/exec">Apply for PAN Reprint</a>
-	<a class="link-button" href="https://script.google.com/macros/s/AKfycbyficPzJC_Ax7w5d9LcaY46yjE1POt1SnRdO9NockLWdH5lQBS4CBON0oTEASZGoS0P/exec">Apply for PAN - PAN allotted already (PAN Number lost)</a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Duplicate PAN Cancellation</a>
-	<a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Apply for TAN</a>
- <h2>Aadhar Services </h2>
-	<a href="https://script.google.com/macros/s/AKfycbx8JyR2HS5h3_EF_ocBoKcORtOCrWdB1X7BIPOXAR2Ifgm-yB6YrtasBnXBcq_fTB0Y8w/exec">Aadhar PAN Link</a>
-	<a href="https://script.google.com/macros/s/AKfycbyNLNLjKdn7khhUigHQvDifEY9ABJOuwsJwgVVrKTKZOvIhTKQ2yDyHaDP-KHxDUNDV/exec">Aadhar Father name Correction</a>
-	<a href="https://script.google.com/macros/s/AKfycbyNLNLjKdn7khhUigHQvDifEY9ABJOuwsJwgVVrKTKZOvIhTKQ2yDyHaDP-KHxDUNDV/exec">Aadhar Address Correction</a>
-
-   </div>
-
-
-  <div  class="box"> <h2>GST Services</h2>
-       <a href="https://script.google.com/macros/s/AKfycbyTJBM5roB8MoY_O-1XfksYAv71YEkGP0pxvyEjNUJKsoHXilC-0LPEF3E8sAuIDDL4VA/exec" target="_blank">
-          New GST Registration
-        </a>
-        <a href="https://script.google.com/macros/s/AKfycbylRUAr7Y90d0XRtTIXNj2L6GnWimoBVtuNRC4nOVid1cHFbyF3xdkVann4nctQBufciA/exec" target="_blank">   GST Return Filing  </a>
-	   <a href="https://script.google.com/macros/s/AKfycbzBDtAKLgvZdJ4YTxBq0-wLlGZffI2mn2ks6ai98WjnMadf9UBPt9ahBDaCGTvnSdETeA/exec" target="_blank">   GST Consultation  </a>
-        <a href="https://script.google.com/macros/s/AKfycbxj2t89_H-oH9FstQu7CXTuIyAZnmSiU5XNx-pe0JqHFb_x-kwVT75a8gKWcrAsreHk5A/exec">Cancellation of GST</a>
-        <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">GST Notice</a>
-        <a href="https://script.google.com/macros/s/AKfycbzgCzFJLPyNS5DrXTiTyYUCBrxl9jrDcFg-WhF1yHYICaH3SJb3qYdInOkx-A4wQM8ANw/exec">Composition Scheme</a>  
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Gst Refund</a>  
-	  <a href="https://script.google.com/macros/s/AKfycbwqvV4umEXAAAy0K3KrPyO6xdeJo4zUytmkSdaEwSpjsCJQsSU9WsHHM048WZguE7bA_A/exec">E-way Bill</a>  
-	    <a href="https://script.google.com/macros/s/AKfycbwHOevOd7d_WSPFy6lI_yrDkGPWl27MX549mhNxLKPiXRcWVIfUJGKvnSUt4N10KMeOEQ/exec">Casual Taxable Person - GST</a>  
-	   <h2>Certifications</h2>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbwbrasD_kfCqBghbXACtCkG36Is9kZecrqQ6sv8Ga_YIGN7OXp-sGBx9dc085ZljJwb/exec">Turnover Certificate</a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbzTO1LqDM6c96NFcRtKRZdOtVwHO9IrFVD3rjiLn4krHrHKHonZ2LYtJlWEU_BAJfzT1A/exec">Networth Certificate</a>
-  	    <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Accounting</a>
-	    <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">CA Report</a>
-	    <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Finanacial Statements</a>
-	  	<a href="https://script.google.com/macros/s/AKfycbybpCpZs_Y0FvTpwxsiL31d8sPy3T3z97p_zjL3riLUrRrMOXdIgCMKt0dzxqSysygh/exec">UDIN Certification Services</a>
-    </div>
-	
-<div  class="box"> 
-<h2>Income Tax</h2>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbyTseOlJcm3ctLUEgExwqNeapsFRb62Au7-K9jysyKMkXVJjgqfCNjWcKzos8r4N8HQWA/exec">ITR Filing (3 Years)</a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Form 26AS (Form 16)</a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Income Tax Notice</a>
-	 <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Income Tax Refund</a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">TDS/TCS Filing</a>
-	 <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Capital Gains (Shares, Options, Mutual Funds)</a>
-        <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Tax Planning</a>
-	<a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Tax Audit</a>
-<h2>MCA Services</h2>
-     <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">New Company Registration(Pvt, Ltd, OPC etc)</a>
-<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank"> MCA Filings</a>
- <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank"> ROC Comliances</a>
-<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">LLP Registration</a>
-<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Firm Registration</a>
-<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">DIN-Director Services</a>
-<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Stratup Registration</a>
-
-	
+<!-- Login Form -->
+<div id="loginPage" class="login-container">
+  <div class="login-form">
+    <h2>CoreTax Login</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="validateLogin()">Login</button>
+    <div id="errorMessage" class="error-message">Invalid username or password</div>
+  </div>
 </div>
- <div  class="box">
-<h2>Reg & Licences</h2>
-    	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">  EPF | ESI Registration </a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">MSME (Udyam Registration)</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Trademark Registration)</a>
-	 <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">HUF Registration)</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Professional Tax Registration (payments & Return)</a> 
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Labour Licence </a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">GHMC Trade Licence</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Food Licence (FSSAI)</a>
-<h2>Other  Services</h2>
-	 <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">EPF Withdrawal</a>
-        <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Digital Signature (DSC)</a>
-   	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Payroll Outsourse</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">E-Commerce Consultation</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Rental Deed</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Partnership Deed</a>
-	<a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Agreements, Contracts etc,</a>
-	</div>
 
+<!-- Main Website Content (hidden initially) -->
+<div id="websiteContent" class="website-content">
+  <div class="top-bar">
+    CoreTax Portal |     <span id="loggedInUser">     </span>    | <a href="#" onclick="logout()">Logout</a>
+  </div>
+
+  <br><br><br><br><br>
+  <div class="coretax-container">
+    CoreTax
+    <div class="hover-info">sahithitaxconsultancy@gmail.com | 8499994485</div>
+    <p style="font-size: 14px;">We provide expert tax consultation services.</p>
+    <p style="font-size: 12px;">A Division of Sahithi Tax Consultancy</p>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <h2>PAN/TAN Services</h2>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbwRMN2ZYVaM42IY0XgAa5-6RzUQr797NmPENpLniJRyAwHmkTCFLQx0LNKX_5iWCrTu/exec" target="_blank">
+        Apply for New PAN (Individual, Firm, Company etc,)
+      </a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbyMYkXl99VIIRYKcvW85_joVkFtxV7Eql796Okm4drkRlR_COa4V0KWCZa4wWspW6QcEA/exec" target="_blank">
+        Apply for PAN Correction (Individual, Firm, Company etc,)
+      </a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbw2sye9oMYwLfbl6B7mYy7dllgmge345cAmLALrgfF27Uxlg38qBrSIUVVyAPDPMWXQ/exec">Apply for PAN Reprint</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbyficPzJC_Ax7w5d9LcaY46yjE1POt1SnRdO9NockLWdH5lQBS4CBON0oTEASZGoS0P/exec">Apply for PAN - PAN allotted already (PAN Number lost)</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Duplicate PAN Cancellation</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Apply for TAN</a>
+      <h2>Aadhar Services</h2>
+      <a href="https://script.google.com/macros/s/AKfycbx8JyR2HS5h3_EF_ocBoKcORtOCrWdB1X7BIPOXAR2Ifgm-yB6YrtasBnXBcq_fTB0Y8w/exec">Aadhar PAN Link</a>
+      <a href="https://script.google.com/macros/s/AKfycbyNLNLjKdn7khhUigHQvDifEY9ABJOuwsJwgVVrKTKZOvIhTKQ2yDyHaDP-KHxDUNDV/exec">Aadhar Father name Correction</a>
+      <a href="https://script.google.com/macros/s/AKfycbyNLNLjKdn7khhUigHQvDifEY9ABJOuwsJwgVVrKTKZOvIhTKQ2yDyHaDP-KHxDUNDV/exec">Aadhar Address Correction</a>
     </div>
-<p class="footer">Core Tax Consulting | sahithitaxconsultancy@gmail.com | 8499994485</p>
 
-  <script>
+    <div class="box">
+      <h2>GST Services</h2>
+      <a href="https://script.google.com/macros/s/AKfycbyTJBM5roB8MoY_O-1XfksYAv71YEkGP0pxvyEjNUJKsoHXilC-0LPEF3E8sAuIDDL4VA/exec" target="_blank">
+        New GST Registration
+      </a>
+      <a href="https://script.google.com/macros/s/AKfycbylRUAr7Y90d0XRtTIXNj2L6GnWimoBVtuNRC4nOVid1cHFbyF3xdkVann4nctQBufciA/exec" target="_blank">GST Return Filing</a>
+      <a href="https://script.google.com/macros/s/AKfycbzBDtAKLgvZdJ4YTxBq0-wLlGZffI2mn2ks6ai98WjnMadf9UBPt9ahBDaCGTvnSdETeA/exec" target="_blank">GST Consultation</a>
+      <a href="https://script.google.com/macros/s/AKfycbxj2t89_H-oH9FstQu7CXTuIyAZnmSiU5XNx-pe0JqHFb_x-kwVT75a8gKWcrAsreHk5A/exec">Cancellation of GST</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">GST Notice</a>
+      <a href="https://script.google.com/macros/s/AKfycbzgCzFJLPyNS5DrXTiTyYUCBrxl9jrDcFg-WhF1yHYICaH3SJb3qYdInOkx-A4wQM8ANw/exec">Composition Scheme</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Gst Refund</a>
+      <a href="https://script.google.com/macros/s/AKfycbwqvV4umEXAAAy0K3KrPyO6xdeJo4zUytmkSdaEwSpjsCJQsSU9WsHHM048WZguE7bA_A/exec">E-way Bill</a>
+      <a href="https://script.google.com/macros/s/AKfycbwHOevOd7d_WSPFy6lI_yrDkGPWl27MX549mhNxLKPiXRcWVIfUJGKvnSUt4N10KMeOEQ/exec">Casual Taxable Person - GST</a>
+      <h2>Certifications</h2>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbwbrasD_kfCqBghbXACtCkG36Is9kZecrqQ6sv8Ga_YIGN7OXp-sGBx9dc085ZljJwb/exec">Turnover Certificate</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzTO1LqDM6c96NFcRtKRZdOtVwHO9IrFVD3rjiLn4krHrHKHonZ2LYtJlWEU_BAJfzT1A/exec">Networth Certificate</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Accounting</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">CA Report</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Finanacial Statements</a>
+      <a href="https://script.google.com/macros/s/AKfycbybpCpZs_Y0FvTpwxsiL31d8sPy3T3z97p_zjL3riLUrRrMOXdIgCMKt0dzxqSysygh/exec">UDIN Certification Services</a>
+    </div>
 
-  </script>
+    <div class="box">
+      <h2>Income Tax</h2>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbyTseOlJcm3ctLUEgExwqNeapsFRb62Au7-K9jysyKMkXVJjgqfCNjWcKzos8r4N8HQWA/exec">ITR Filing (3 Years)</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Form 26AS (Form 16)</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Income Tax Notice</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Income Tax Refund</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">TDS/TCS Filing</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Capital Gains (Shares, Options, Mutual Funds)</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Tax Planning</a>
+      <a class="link-button" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Tax Audit</a>
+      <h2>MCA Services</h2>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">New Company Registration(Pvt, Ltd, OPC etc)</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">MCA Filings</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">ROC Comliances</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">LLP Registration</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Firm Registration</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">DIN-Director Services</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Stratup Registration</a>
+    </div>
+
+    <div class="box">
+      <h2>Reg & Licences</h2>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">EPF | ESI Registration</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">MSME (Udyam Registration)</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Trademark Registration)</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">HUF Registration)</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Professional Tax Registration (payments & Return)</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Labour Licence</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">GHMC Trade Licence</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Food Licence (FSSAI)</a>
+      <h2>Other Services</h2>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">EPF Withdrawal</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Digital Signature (DSC)</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Payroll Outsourse</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">E-Commerce Consultation</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Rental Deed</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Partnership Deed</a>
+      <a href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Agreements, Contracts etc,</a>
+    </div>
+  </div>
+
+  <p class="footer">Core Tax Consulting | sahithitaxconsultancy@gmail.com | 8499994485</p>
+</div>
+
+<script>
+  // List of valid users (in a real app, this would be server-side)
+  const validUsers = {
+    "admin": "password123",
+    "user1": "tax2023",
+    "sahithi": "coretax123"
+  };
+
+  function validateLogin() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Check if username exists and password matches
+    if (validUsers[username] && validUsers[username] === password) {
+      // Successful login
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('websiteContent').style.display = 'block';
+      document.getElementById('loggedInUser').textContent = username;
+      
+      // Store login state in sessionStorage
+      sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('username', username);
+    } else {
+      // Failed login
+      errorMessage.style.display = 'block';
+    }
+  }
+
+  function logout() {
+    // Clear session storage
+    sessionStorage.removeItem('isLoggedIn');
+    sessionStorage.removeItem('username');
+    
+    // Show login page and hide website content
+    document.getElementById('loginPage').style.display = 'flex';
+    document.getElementById('websiteContent').style.display = 'none';
+    
+    // Clear form fields
+    document.getElementById('username').value = '';
+    document.getElementById('password').value = '';
+    document.getElementById('errorMessage').style.display = 'none';
+  }
+
+  // Check if user is already logged in when page loads
+  window.onload = function() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const username = sessionStorage.getItem('username');
+    
+    if (isLoggedIn === 'true' && username) {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('websiteContent').style.display = 'block';
+      document.getElementById('loggedInUser').textContent = username;
+    } else {
+      document.getElementById('loginPage').style.display = 'flex';
+      document.getElementById('websiteContent').style.display = 'none';
+    }
+    
+    // Allow form submission on Enter key
+    document.getElementById('password').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        validateLogin();
+      }
+    });
+  };
+</script>
 
 </body>
 </html>
