@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <base target="_top">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&amp;display=swap" rel="stylesheet">
   <style>
     /* Login Page Styles */
     .login-container {
@@ -10,7 +8,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: url('https://imgur.com/jYfGE16.jpg') no-repeat center center fixed;
+      background-color: #fff;
       background-size: cover;
     }
     
@@ -18,13 +16,13 @@
       background: rgba(255, 255, 255, 0.9);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 20px rgb(96 238 14 / 56%);
       width: 350px;
       text-align: center;
     }
     
     .login-form h2 {
-      color: #333;
+      color: #145886;
       margin-bottom: 20px;
     }
     
@@ -38,7 +36,7 @@
     }
     
     .login-form button {
-      background-color: #e9c261;
+      background-color: #fff;
       color: black;
       border: none;
       padding: 12px 20px;
@@ -51,7 +49,7 @@
     }
     
     .login-form button:hover {
-      background-color: #d8b24d;
+      background-color: #55B848;
     }
     
     .error-message {
@@ -69,7 +67,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 20px;
-      background: url('https://imgur.com/jYfGE16.jpg') no-repeat center center fixed;
+      background: white;
       background-size: cover;
       color: white;
       font-family: 'Lora', serif;
@@ -132,7 +130,7 @@
     }
     
     .container {
-      background: Black;
+      background: white;
       display: flex;
       justify-content: space-between;
     }
@@ -150,10 +148,13 @@
     }
     
     .box {
-      width: 250px;
-      height: 700px;
+      width: 320px;
+      height: AUTO;
       text-align: left;
       padding: 10px;
+      MARGIN: 20px;
+box-shadow: 0 0 20px #14588666;
+
     }
       .box1 {
       width: 250px;
@@ -169,7 +170,7 @@
     }
     /* Fixed Top Bar Styles */
 .top-bar {
-  background-color: #e9c261;
+  background-color: #55B848;
   color: black;
   padding: 5px 20px; /* Reduced padding to help achieve 25px height */
   text-align: center;
@@ -202,7 +203,7 @@
     }
     
     a {
-      color: white;
+      color: #145886;
       text-align: left;
       display: block;
       text-decoration: none;
@@ -211,9 +212,10 @@
       margin: 10px 0;
     }
     
-    a:hover {
-      text-decoration: underline;
-    }
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #F37920;
+}
     
     h1 {
       font-size: 72px;
@@ -221,8 +223,8 @@
     }
     
     h2 {
-      background:#e9c261;
-      color: black;
+      background:#fff;
+      color: #55b848;
     }
     
     .info-container {
@@ -239,7 +241,7 @@
     .coretax-container {
       text-align: center;
       font-size: 102px;
-      color: #e9c261;
+      color: #145886;
       position: relative;
       display: inline-block;
       background: ;
@@ -271,7 +273,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: #55b848;
       color: white;
       text-align: center;
       padding: 10px;
@@ -293,120 +295,138 @@
         font-size: 72px;
       }
     }
+
+
   </style>
 </head>
 <body>
 
 <!-- Login Form -->
-<div id="loginPage" class="login-container">
+<div id="loginPage" class="login-container" style="display: flex;">
   <div class="login-form">
-    <h2>CoreTax Login</h2>
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
+    <h2>TaxPulse Login</h2>
+    <input type="text" id="username" placeholder="Username" required="">
+    <input type="password" id="password" placeholder="Password" required="">
     <button onclick="validateLogin()">Login</button>
-    <div id="errorMessage" class="error-message">Invalid username or password</div>
+    <div id="errorMessage" class="error-message" style="display: none;">Invalid username or password</div>
   </div>
  
 </div>
 
 <!-- Main Website Content (hidden initially) -->
-<div id="websiteContent" class="website-content">
+<div id="websiteContent" class="website-content" style="display: none;">
   <div class="top-bar">
-    <a class="link-button" href="#">CoreTax Portal</a> <p> &nbsp|&nbsp </p>    <a class="link-button" href="#"> <span id="loggedInUser">    </span> </a>   <p> &nbsp|&nbsp </p>  <a class="link-button" href="#">User Registration</a>
- <p> &nbsp|&nbsp </p> <a href="https://script.google.com/macros/s/AKfycbyCvFB3A0apUam1Je0FIyxHlSVoTyFz0nwy4cFHOVUbyZXbjalgCSq1B4WIEBW3EIHqcQ/exec">Application Status</a> <p> &nbsp|&nbsp </p><a class="link-button" href="#">User Commision Details</a> <p> &nbsp|&nbsp </p> <a href="#" onclick="logout()">Logout</a></div>
-  <br><br><br><br><br>
+    <a class="link-button" href="#">TaxPulse Portal</a> <p> &nbsp;|&nbsp; </p>    <a class="link-button" href="#"> <span id="loggedInUser">admin</span> </a>   <p> &nbsp;|&nbsp; </p>  <a class="link-button" href="#">User Registration</a>
+ <p> &nbsp;|&nbsp; </p> <a href="https://script.google.com/macros/s/AKfycbyCvFB3A0apUam1Je0FIyxHlSVoTyFz0nwy4cFHOVUbyZXbjalgCSq1B4WIEBW3EIHqcQ/exec">Application Status</a> <p> &nbsp;|&nbsp; </p><a class="link-button" href="#">User Commision Details</a> <p> &nbsp;|&nbsp; </p> <a href="#" onclick="logout()">Logout</a></div>
+  <br><br>
   <div class="coretax-container">
-    CoreTax
+    TaxPulse
     <div class="hover-info">sahithitaxconsultancy@gmail.com | 8499994485</div>
-    <p style="font-size: 20px;">We provide expert tax consultation services.</p>
-    <p style="font-size: 20px;">A Division of Sahithi Tax Consultancy</p>
+    <p style="color: black; font-size: 20px;">We provide expert tax consultation services.</p>
+    <p style="color: black; font-size: 20px;">A Division of Sahithi Tax Consultancy</p>
   </div>
 
   <div class="container">
     <div class="box">
       <h2>PAN/TAN Services</h2>
-      <a class="link-button pan-link" href="#" target="_blank">
+      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">
         Apply for New PAN (Individual, Firm, Company etc,)
       </a>
-      <a class="link-button pan-link" href="#" target="_blank">
+      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">
         Apply for PAN Correction (Individual, Firm, Company etc,)
       </a>
-      <a class="link-button pan-link" href="#">Apply for PAN Reprint</a>
-      <a class="link-button pan-link" href="#">Apply for PAN - PAN allotted already (PAN Number lost)</a>
-      <a class="link-button pan-link" href="#">Duplicate PAN Cancellation</a>
-      <a class="link-button pan-link" href="#">Apply for TAN</a>
+      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Apply for PAN Reprint</a>
+      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Apply for PAN - PAN allotted already (PAN Number lost)</a>
+      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Duplicate PAN Cancellation</a>
+      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Apply for TAN</a>
+ </div>
+
+    <div class="box">
       <h2>Aadhar Services</h2>
-      <a class="aadhar-link" href="#">Aadhar PAN Link</a>
-      <a class="aadhar-link" href="#">Aadhar Father name Correction</a>
-      <a class="aadhar-link" href="#">Aadhar Address Correction</a>
-      <a class="aadhar-link" href="#">VOTER ID</a>
+      <a class="aadhar-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Aadhar PAN Link</a>
+      <a class="aadhar-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Aadhar Father name Correction</a>
+      <a class="aadhar-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Aadhar Address Correction</a>
+      <a class="aadhar-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">VOTER ID</a>
     </div>
 
     <div class="box">
       <h2>GST Services</h2>
-      <a class="gst-link" href="#" target="_blank">
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">
         New GST Registration
       </a>
-      <a class="gst-link" href="#" target="_blank">GST Return Filing</a>
-      <a class="gst-link" href="#" target="_blank">GST Consultation</a>
-      <a class="gst-link" href="#">Cancellation of GST</a>
-      <a class="gst-link" href="#">GST Notice</a>
-      <a class="gst-link" href="#">Composition Scheme</a>
-      <a class="gst-link" href="#">Gst Refund</a>
-      <a class="gst-link" href="#">E-way Bill</a>
-      <a class="gst-link" href="#">Casual Taxable Person - GST</a>
-      <h2>Certifications</h2>
-      <a class="link-button cert-link" href="#">Turnover Certificate</a>
-      <a class="link-button cert-link" href="#">Networth Certificate</a>
-      <a class="link-button cert-link" href="#">Accounting</a>
-      <a class="link-button cert-link" href="#">CA Report</a>
-      <a class="link-button cert-link" href="#">Finanacial Statements</a>
-      <a class="udin-link" href="#">UDIN Certification Services</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">GST Return Filing</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">GST Consultation</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Cancellation of GST</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">GST Notice</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Composition Scheme</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Gst Refund</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">E-way Bill</a>
+      <a class="gst-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Casual Taxable Person - GST</a>
+       </div>
+
+    <div class="box">
+<h2>Certifications</h2>
+      <a class="link-button cert-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Turnover Certificate</a>
+      <a class="link-button cert-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Networth Certificate</a>
+      <a class="link-button cert-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Accounting</a>
+      <a class="link-button cert-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">CA Report</a>
+      <a class="link-button cert-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Finanacial Statements</a>
+      <a class="udin-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">UDIN Certification Services</a>
     </div>
+
+  </div>
+
+  <div class="container">
 
     <div class="box">
       <h2>Income Tax</h2>
-      <a class="link-button it-link" href="#">ITR Filing (3 Years)</a>
-      <a class="link-button it-link" href="#">Form 26AS (Form 16)</a>
-      <a class="link-button it-link" href="#">Income Tax Notice</a>
-      <a class="link-button it-link" href="#">Income Tax Refund</a>
-      <a class="link-button it-link" href="#">TDS/TCS Filing</a>
-      <a class="link-button it-link" href="#">Capital Gains (Shares, Options, Mutual Funds)</a>
-      <a class="link-button it-link" href="#">Tax Planning</a>
-      <a class="link-button it-link" href="#">Tax Audit</a>
-      <h2>MCA Services</h2>
-      <a class="mca-link" href="#" target="_blank">New Company Registration(Pvt, Ltd, OPC etc)</a>
-      <a class="mca-link" href="#" target="_blank">MCA Filings</a>
-      <a class="mca-link" href="#" target="_blank">ROC Comliances</a>
-      <a class="mca-link" href="#" target="_blank">LLP Registration</a>
-      <a class="mca-link" href="#" target="_blank">Firm Registration</a>
-      <a class="mca-link" href="#" target="_blank">DIN-Director Services</a>
-      <a class="mca-link" href="#" target="_blank">Stratup Registration</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">ITR Filing (3 Years)</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Form 26AS (Form 16)</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Income Tax Notice</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Income Tax Refund</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">TDS/TCS Filing</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Capital Gains (Shares, Options, Mutual Funds)</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Tax Planning</a>
+      <a class="link-button it-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Tax Audit</a>
+      </div>
+
+    <div class="box">
+ <h2>MCA Services</h2>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">New Company Registration(Pvt, Ltd, OPC etc)</a>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">MCA Filings</a>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">ROC Comliances</a>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">LLP Registration</a>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Firm Registration</a>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">DIN-Director Services</a>
+      <a class="mca-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Stratup Registration</a>
     </div>
 
     <div class="box">
-      <h2>Reg & Licences</h2>
-      <a class="reg-link" href="#" target="_blank">EPF | ESI Registration</a>
-      <a class="reg-link" href="#">MSME (Udyam Registration)</a>
-      <a class="reg-link" href="#">Trademark Registration</a>
-      <a class="reg-link" href="#">HUF Registration</a>
-      <a class="reg-link" href="#">Professional Tax Registration (payments & Return)</a>
-      <a class="reg-link" href="#" target="_blank">Labour Licence</a>
-      <a class="reg-link" href="#">GHMC Trade Licence</a>
-      <a class="reg-link" href="#">Food Licence (FSSAI)</a>
-      <a class="reg-link" href="#">Import Export Code (IEC) LICENCE</a>
-      <h2>Other Services</h2>
-      <a class="other-link" href="#">EPF Withdrawal</a>
-      <a class="other-link" href="#">Digital Signature (DSC)</a>
-      <a class="other-link" href="#">Payroll Outsourse</a>
-      <a class="other-link" href="#">E-Commerce Consultation</a>
-      <a class="other-link" href="#">Rental/Lease Deed</a>
-      <a class="other-link" href="#">Partnership Deed</a>
-      <a class="other-link" href="#">Agreements, Contracts etc,</a>
+      <h2>Reg &amp; Licences</h2>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">EPF | ESI Registration</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">MSME (Udyam Registration)</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Trademark Registration</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">HUF Registration</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Professional Tax Registration (payments &amp; Return)</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec" target="_blank">Labour Licence</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">GHMC Trade Licence</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Food Licence (FSSAI)</a>
+      <a class="reg-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Import Export Code (IEC) LICENCE</a>
+       </div>
+
+    <div class="box">
+<h2>Other Services</h2>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">EPF Withdrawal</a>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Digital Signature (DSC)</a>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Payroll Outsourse</a>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">E-Commerce Consultation</a>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Rental/Lease Deed</a>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Partnership Deed</a>
+      <a class="other-link" href="https://script.google.com/macros/s/AKfycbzAAB-lLEVbeLE5TNU1nEkq2eL1xZKZvSiwAxyEHH-BJVS3FVPqWq0duc_DG_qz5el9Sw/exec">Agreements, Contracts etc,</a>
     </div>
   </div>
 
-  <p class="footer">Core Tax Consulting | sahithitaxconsultancy@gmail.com | 8499994485</p>
+  <p class="footer">TaxPulse Private Limited | sahithitaxconsultancy@gmail.com | 8499994485</p>
 </div>
 
 <script>
@@ -545,5 +565,6 @@
   };
 </script>
 
-</body>
-</html>
+
+
+</body></html>
