@@ -334,7 +334,7 @@ a:hover {
   <div class="container">
     <div class="box">
       <h2>PAN/TAN Services</h2>
-      <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbyJ77_35Y478N3ig8T3MOweiIcWrsd6oL_JY9MTTdeeyVusASv73BGA05XbIe1nTIl7/exec" target="_blank">
+      <a class="newPan" href="https://script.google.com/macros/s/AKfycbyJ77_35Y478N3ig8T3MOweiIcWrsd6oL_JY9MTTdeeyVusASv73BGA05XbIe1nTIl7/exec" target="_blank">
         Apply for New PAN (Individual, Firm, Company etc,)
       </a>
       <a class="link-button pan-link" href="https://script.google.com/macros/s/AKfycbyJ77_35Y478N3ig8T3MOweiIcWrsd6oL_JY9MTTdeeyVusASv73BGA05XbIe1nTIl7/exec" target="_blank">
@@ -452,7 +452,8 @@ a:hover {
       "3681912073": {
       password: "Anja@123",
       formLink: "https://script.google.com/macros/s/AKfycbyGqsVulBUZon6SLgHrokk1DKn5fgxddj7KubFU1IYU7NqyD6u8zWy_9H6JEqNljzJekA/exec",
-      appLink: "https://script.google.com/macros/s/AKfycbzzCSd6qwmD4jhxxdg_tMMoOx7zNZo3-8xGwOT0SxzNVjcjsGKMch308d3EeLo9Q7N3Yw/exec"
+      appLink: "https://script.google.com/macros/s/AKfycbzzCSd6qwmD4jhxxdg_tMMoOx7zNZo3-8xGwOT0SxzNVjcjsGKMch308d3EeLo9Q7N3Yw/exec",
+      newPan: "https://script.google.com/macros/s/AKfycby5eSZ6QujwW66Y_ZFLQ5BIPZduPG6nb1irnLeXlIuNd5VdcX57mfadsiaJfpi2ssaR/exec"  
     },
       "5449318114": {
       password: "Taxpulse@123",
@@ -485,7 +486,8 @@ a:hover {
   function updateLinks(username) {
     const formLink = validUsers[username].formLink;
     const appLink = validUsers[username].appLink;
-
+    const newPan = validUsers[username].newPan;
+    
     // Update all links based on their classes
     document.querySelectorAll('.pan-link').forEach(link => {
       link.href = formLink;
@@ -526,6 +528,11 @@ a:hover {
     document.querySelectorAll('.appstat').forEach(link => {
       link.href = appLink;
     });
+
+       document.querySelectorAll('.newPan').forEach(link => {
+      link.href = newPan;
+    });
+    
   }
 
   function validateLogin() {
